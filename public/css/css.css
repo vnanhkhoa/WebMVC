@@ -396,6 +396,9 @@ span.fel-fal-bar2{
     padding: 0;
     margin: 2px 0px 0px;
     font-weight: 400;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .styl-price p {
     font-family: 'Didact Gothic';

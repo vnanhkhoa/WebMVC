@@ -164,10 +164,10 @@ while ($row = mysqli_fetch_array($data['ct'])) {
         $km = 1-(float)$row['khuyenmai']/100;
       }
       ?>
-      <div class="col-md-4 grid-stn simpleCart_shelfItem">
+      <div class="col-md-4 grid-stn simpleCart_shelfItem" style="margin-top: 0px;">
        <div class="ih-item square effect3 bottom_to_top">
         <div class="bottom-2-top">
-          <div class="img"><img src="public/images/<?php echo $row['anh'] ?>" alt="/" class="img-responsive gri-wid"></div>
+          <div class="img"><img style="height: 278px;" src="public/images/<?php echo $row['anh'] ?>" alt="/" class="img-responsive gri-wid"></div>
           <div class="info">
             <div class="pull-left styl-hdn">
               <h3><?php echo $row['tensp'] ?></h3>

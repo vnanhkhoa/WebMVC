@@ -19,7 +19,7 @@
             <div class="col-md-4 grid-stn simpleCart_shelfItem">
                <div class="ih-item square effect3 bottom_to_top">
                 <div class="bottom-2-top">
-                    <div class="img"><img src="public/images/<?php echo $row['anh'] ?>" alt="/" class="img-responsive gri-wid"></div>
+                    <div class="img"><img style="height: 278px;" src="public/images/<?php echo $row['anh'] ?>" alt="/" class="img-responsive gri-wid"></div>
                     <div class="info">
                         <div class="pull-left styl-hdn">
                             <h3><?php echo $row['tensp'] ?></h3>
@@ -36,7 +36,7 @@
                     </div></div>
                 </div>
                 <div class="quick-view">
-                    <a href="single.html">Quick view</a>
+                    <a href="Home/Product_id/<?php echo $row['masp'] ?>">Quick view</a>
                 </div>
             </div>
         <?php }  ?>
@@ -49,7 +49,7 @@
                  <div class="row row1 scroll-pane">
                      <div class="col col-4">
                         <?php while($dm = mysqli_fetch_array($data['dm'])) { ?>                      
-                         <label class="checkbox"><input type="checkbox" name="checkbox" id="<?php echo $dm['iddanhmuc'] ?>"><i></i><?php echo $dm['tendanhmuc']; ?></label>
+                         <label class="dm checkbox"><input type="checkbox" name="checkbox" id="<?php echo $dm['iddanhmuc'] ?>"><i></i><?php echo $dm['tendanhmuc']; ?></label>
                      <?php } ?>
                  </div>
              </div>
@@ -57,7 +57,7 @@
          <script>
            $(document).ready(function(){
                const x = [];
-               $("input[name='checkbox']").click(function(ev) { 
+               $(".dm input[name='checkbox']").click(function(ev) { 
                 var id = $(this).attr('id'); 
                 if ($(this).is(':checked'))
                 {
